@@ -1,0 +1,155 @@
+<%- include('./partials/header') %>
+
+<h1>Form to add a new Blog</h1>
+
+<form action="/blogs" method="POST">
+    <section>
+        <label for="title">Title: </label>
+        <input type="text" name="title" id="title">
+    </section>
+    <section>
+        <label for="aadmi">Author: </label>
+        <input type="text" name="author" id="aadmi">
+    </section>
+    <section>
+        <label for="blog">Comment: </label>
+        <br>
+        <textarea name="comment" id="blog" cols="30" rows="4"></textarea>
+    </section>
+    
+    <button type="submit">Add blog</button>
+    <style>
+        /* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #9e2d2d;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+body {
+    background: linear-gradient(135deg, #74ebd5 0%, #acb6e5 100%);
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+
+/* Main Heading */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 30px;
+    color: #333;
+    border-bottom: 2px solid #ff6600;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+/* Form Container */
+form {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Section */
+form section {
+    margin-bottom: 20px;
+}
+
+/* Label Styles */
+form label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Input Styles */
+form input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    margin-top: 10px;
+    transition: border-color 0.3s;
+}
+
+form input[type="text"]:focus {
+    border-color: #ff6600;
+}
+
+/* Textarea Styles */
+form textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    resize: none;
+    outline: none;
+    margin-top: 10px;
+    transition: border-color 0.3s;
+}
+
+form textarea:focus {
+    border-color: #ff6600;
+}
+
+/* Submit Button Styles */
+button {
+    display: block;
+    width: 100%;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e55d00;
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 50px;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+    </style>
+</form>
+
+
+<%- include('./partials/footer') %>

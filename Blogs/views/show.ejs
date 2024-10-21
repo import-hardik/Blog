@@ -1,0 +1,133 @@
+<%- include('./partials/header') %>
+
+<h1>Showing a particular Blog</h1>
+
+<div id="showw">
+
+    <h1><%=foundProduct.id%></h1>
+    <h2><%=foundProduct.title%></h2>
+    <h3><%=foundProduct.author%></h3>
+    <p><%=foundProduct.comment%></p>
+    <p><button> <a href="/blogs">Back</a> </button></p>
+    <p><button> <a href="/blogs/<%=foundProduct.id%>/edit">Edit</a> </button></p>
+    <p>
+        <form action="/blogs/<%=foundProduct.id%>?_method=DELETE" method="POST">
+            <button type="submit">Delete</button>
+        </form>
+    </p>
+    <style>
+        /* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+body {
+    background: linear-gradient(135deg, #74ebd5 0%, #acb6e5 100%);
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Main Heading */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 30px;
+    color: #333;
+    border-bottom: 2px solid #ff6600;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Container for the blog details */
+#showw {
+    width: 60%;
+    margin: 30px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Blog Details */
+#showw h1 {
+    font-size: 24px;
+    color: #ff6600;
+    margin-bottom: 10px;
+}
+
+#showw h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#showw h3 {
+    font-size: 20px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+#showw p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Button Styles */
+button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+button:hover {
+    background-color: #e55d00;
+}
+
+/* Links inside buttons */
+button a:hover {
+    color: #fff;
+}
+
+/* Form and Delete Button */
+form {
+    display: inline-block;
+}
+
+form button {
+    background-color: #d9534f;
+    margin-top: 15px;
+}
+
+form button:hover {
+    background-color: #c9302c;
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 50px;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+}
+
+    </style>
+</div>
+
+<%- include('./partials/footer') %>

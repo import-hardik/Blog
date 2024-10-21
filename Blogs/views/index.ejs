@@ -1,0 +1,153 @@
+<%-include('./partials/header')%>
+
+<h1>Display all Blogs</h1>
+<a href="/blog/new">NEW</a>
+<article>
+    <%for(let blog of allBlogs){%>
+        <div>
+            <h1><%=blog.id%></h1>
+            <h2><%=blog.title%></h2>
+            <h3><%=blog.author%></h3>
+            <p><%=blog.Comment%></p>
+            <p> <a href="/blogs/<%=blog.id%>">Show</a> </p>
+        </div>
+    <%}%>
+</article>
+<style>
+    
+/* body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+} */
+body {
+    background: linear-gradient(135deg, #74ebd5 0%, #acb6e5 100%);
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+
+/* Header and footer styling (if they exist) */
+header, footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+h1, h2, h3 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Styling for the blog container */
+article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+article div {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    width: calc(33.333% - 40px);
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+article div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+article div h1 {
+    font-size: 1.5rem;
+    color: #16a085;
+}
+
+article div h2 {
+    font-size: 1.25rem;
+}
+
+article div h3 {
+    font-size: 1rem;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+article div p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+article div p a {
+    background-color: #3498db;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease;
+}
+
+article div p a:hover {
+    background-color: #2980b9;
+}
+
+/* Styling for the NEW button */
+a[href="/blog/new"] {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin: 20px 0;
+    transition: background-color 0.3s ease;
+}
+
+a[href="/blog/new"]:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    article div {
+        width: calc(50% - 30px);
+    }
+}
+
+@media (max-width: 480px) {
+    article div {
+        width: 100%;
+    }
+}
+
+</style>
+
+
+<%-include('./partials/footer')%>
